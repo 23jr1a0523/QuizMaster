@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster | Test Your Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">🧠 QuizMaster</a>
+    <span class="badge">Knowledge Challenge</span>
+  </header>
+
+  <main class="container">
+    <section id="startScreen" class="card start-screen">
+      <div class="hero-icon">🎯</div>
+      <p class="eyebrow">WELCOME TO QUIZMASTER</p>
+      <h1>Challenge Your <span>Mind.</span></h1>
+      <p class="description">
+        Test your knowledge, answer exciting questions,
+        and discover how much you know!
+      </p>
+
+      <div class="stats">
+        <div><strong>10</strong><span>Questions</span></div>
+        <div><strong>15s</strong><span>Per Question</span></div>
+        <div><strong>100</strong><span>Max Points</span></div>
+      </div>
+
+      <label for="category">Choose your category</label>
+      <select id="category">
+        <option value="all">General Knowledge</option>
+        <option value="science">Science</option>
+        <option value="technology">Technology</option>
+        <option value="programming">Programming</option>
+      </select>
+
+      <button id="startBtn" class="btn primary-btn">Start Quiz →</button>
+      <p class="small-note">No pressure. Just have fun learning!</p>
+    </section>
+
+    <section id="quizScreen" class="card quiz-screen hidden">
+      <div class="quiz-top">
+        <span id="questionNumber">Question 1 of 10</span>
+        <span class="timer" id="timer">⏱ 15s</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <p id="questionCategory" class="eyebrow">GENERAL KNOWLEDGE</p>
+      <h2 id="questionText">Question appears here</h2>
+
+      <div id="options" class="options"></div>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+
+      <button id="nextBtn" class="btn primary-btn" disabled>
+        Next Question →
+      </button>
+    </section>
+
+    <section id="resultScreen" class="card result-screen hidden">
+      <div id="resultIcon" class="hero-icon">🏆</div>
+      <p class="eyebrow">QUIZ COMPLETED</p>
+      <h1 id="resultTitle">Amazing Work!</h1>
+      <p id="resultMessage" class="description"></p>
+
+      <div class="score-circle">
+        <strong id="percentage">0%</strong>
+        <span>Your Score</span>
+      </div>
+
+      <div class="stats result-stats">
+        <div><strong id="correctCount">0</strong><span>Correct</span></div>
+        <div><strong id="wrongCount">0</strong><span>Wrong</span></div>
+        <div><strong id="finalPoints">0</strong><span>Points</span></div>
+      </div>
+
+      <button id="restartBtn" class="btn primary-btn">↻ Try Again</button>
+      <button id="homeBtn" class="btn secondary-btn">Back to Home</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for curious minds · QuizMaster © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
